@@ -1,0 +1,354 @@
+<?xml-stylesheet type="text/xsl" href="analysis.xsl"?>
+<test_results>
+<info>
+<name>AutoTester</name><parsing_time_taken>1189.000000</parsing_time_taken>
+</info>
+<queries>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query1">0</id><querystr><![CDATA[variable v; Select v such that Modifies (2, v)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query2">2</id><querystr><![CDATA[procedure p; Select p such that Modifies (p, "paper")]]></querystr>
+<stuans>iter3s1,met3</stuans>
+<correct>iter3s1,met3</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query3">3</id><querystr><![CDATA[stmt s; Select s such that Modifies (s, "packA")]]></querystr>
+<stuans>21,24,26,3,31,33</stuans>
+<correct>3,21,24,26,31,33</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query4">4</id><querystr><![CDATA[variable v; Select v such that Uses (11, v)]]></querystr>
+<stuans>paper</stuans>
+<correct>paper</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" Uses="1" SuchThat="2" CondNum="5" RelNum="2" comment="Query5">5</id><querystr><![CDATA[print pr; Select pr such that Uses (pr, "packB") such that Next (18, pr)]]></querystr>
+<stuans>19</stuans>
+<correct>19</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Uses="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query6">6</id><querystr><![CDATA[variable v; Select v such that Uses (2, v)]]></querystr>
+<stuans>packA,packB,paper</stuans>
+<correct>paper,packA,packB</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Query7">7</id><querystr><![CDATA[assign a; Select a pattern a("packB",_)]]></querystr>
+<stuans>22,27,34</stuans>
+<correct>22,27,34</correct>
+<time_taken>7.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Query8">8</id><querystr><![CDATA[assign a; Select a pattern a(_,_"paper"_)]]></querystr>
+<stuans>8,25,33,34</stuans>
+<correct>8,25,33,34</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" UnnamedVar="1" Pattern="1" CondNum="3" RelNum="0" comment="Query9">9</id><querystr><![CDATA[assign a;  Select a pattern a("packA",_"packA"_)]]></querystr>
+<stuans>26,33</stuans>
+<correct>26,33</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query10">10</id><querystr><![CDATA[stmt s; Select s such that Parent (s, 5)]]></querystr>
+<stuans>4</stuans>
+<correct>4</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query11">11</id><querystr><![CDATA[stmt s; Select s such that Parent (s, 11)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query12">12</id><querystr><![CDATA[stmt s; Select s such that Parent (s, 9)]]></querystr>
+<stuans>4</stuans>
+<correct>4</correct>
+<time_taken>7.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" SuchThat="1" CondNum="4" RelNum="1" comment="Query13">13</id><querystr><![CDATA[stmt s; Select s such that Parent* (_, 5)]]></querystr>
+<stuans>1,10,11,12,13,14,15,16,17,18,19,2,20,21,22,23,24,25,26,27,28,29,3,30,31,32,33,34,35,4,5,6,7,8,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35</correct>
+<time_taken>12.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query14">14</id><querystr><![CDATA[stmt s; Select s such that Parent (9, s)]]></querystr>
+<stuans>10,11</stuans>
+<correct>10,11</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query15">15</id><querystr><![CDATA[stmt s;  Select s such that Parent* (9, s)]]></querystr>
+<stuans>10,11,12,13,14</stuans>
+<correct>10,11,12,13,14</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query16">16</id><querystr><![CDATA[stmt s; while w; Select s such that Parent* (w, s)]]></querystr>
+<stuans>12,13,14,14,25,26,27,28,29,30,29,10,11,12,13,14,5,6,7,8,9,10,11,12,13,14</stuans>
+<correct>5,6,7,8,9,10,11,12,13,14,25,26,27,28,29,30</correct>
+<time_taken>10.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query17">17</id><querystr><![CDATA[stmt s; while w; Select s such that Parent (w, s)]]></querystr>
+<stuans>5,6,9,10,11,12,13,14,25,26,27,28,29,30</stuans>
+<correct>5,6,9,10,11,12,13,14,25,26,27,28,29,30</correct>
+<time_taken>8.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query18">18</id><querystr><![CDATA[stmt s; if ifs; Select s such that Parent (ifs, s)]]></querystr>
+<stuans>7,8,32,33,34</stuans>
+<correct>7,8,32,33,34</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query19">19</id><querystr><![CDATA[stmt s; if ifs; Select ifs such that Parent* (ifs, s)]]></querystr>
+<stuans>31,31,31,6,6</stuans>
+<correct>6,31</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Query20">20</id><querystr><![CDATA[assign a; if i; Select a such that Parent (i, a) pattern a(_,_"paper"_)]]></querystr>
+<stuans>8,33,34</stuans>
+<correct>8,33,34</correct>
+<time_taken>7.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Query21">21</id><querystr><![CDATA[assign a; if i; Select a such that Parent* (i, a) pattern a(_,_"flag"_)]]></querystr>
+<stuans>7</stuans>
+<correct>7</correct>
+<time_taken>7.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parent="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Query22">22</id><querystr><![CDATA[assign a; while w; Select a such that Parent (w, a) pattern a("paper",_)]]></querystr>
+<stuans>5,25</stuans>
+<correct>5,25</correct>
+<time_taken>7.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Query23">23</id><querystr><![CDATA[assign a; while w; Select a such that Parent* (w, a) pattern a("paper",_)]]></querystr>
+<stuans>25,5,7</stuans>
+<correct>5,7,25</correct>
+<time_taken>7.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Pattern="1" SuchThat="1" CondNum="5" RelNum="1" comment="Query24">24</id><querystr><![CDATA[assign a; variable v; Select a such that Modifies (a, v) pattern a(_,_"packB"_)]]></querystr>
+<stuans>27,34,35</stuans>
+<correct>27,34,35</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Uses="1" Pattern="1" SuchThat="2" CondNum="7" RelNum="2" comment="Query25">25</id><querystr><![CDATA[assign a; variable v; Select v such that Uses (a, v) such that Modifies (a, "packA") pattern a(_,_"paper"_)]]></querystr>
+<stuans>packA,paper</stuans>
+<correct>paper,packA</correct>
+<time_taken>10.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="1" Uses="1" SuchThat="2" CondNum="6" RelNum="2" comment="Query26">26</id><querystr><![CDATA[stmt s; Select s such that Uses("met2", _) such that Modifies(s,"num1")]]></querystr>
+<stuans>met2,met2,met2,10,11,12,13,14,15,23,24,28,29,3,4,9</stuans>
+<correct>3,4,9,10,11,12,13,14,15,23,24,28,29</correct>
+<time_taken>8.000000</time_taken>
+<failed>
+<missing></missing>
+<additional>met2</additional>
+<summary>
+<expected>13</expected>
+<matched>13</matched>
+<missing>0</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Calls="1" Modifies="1" UnnamedVar="1" Uses="1" SuchThat="3" CondNum="8" RelNum="3" comment="Query27">27</id><querystr><![CDATA[stmt s; Select s such that Modifies("met1", "num1") such that Uses(7,"flag") such that Calls("met3",_)]]></querystr>
+<stuans>1,1,10,10,11,11,12,12,13,13,14,14,15,15,16,16,17,17,18,18,19,19,2,2,20,20,21,21,22,22,23,23,24,24,25,25,26,26,27,27,28,28,29,29,3,3,30,30,31,31,32,32,33,33,34,34,35,35,4,4,5,5,6,6,7,7,8,8,9,9</stuans>
+<correct>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35</correct>
+<time_taken>13.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="3" Uses="1" Pattern="1" SuchThat="2" CondNum="9" RelNum="2" comment="Query28">28</id><querystr><![CDATA[assign asn; variable var; Select var such that Uses(15,_) such that Modifies(14,_) pattern asn(_,_)]]></querystr>
+<stuans></stuans>
+<correct></correct>
+<time_taken>8.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" UnnamedVar="2" Uses="1" Pattern="2" SuchThat="2" CondNum="9" RelNum="2" comment="Query29">29</id><querystr><![CDATA[assign a1, a2; variable v; Select <a1, a2> such that Uses(9, "paper") such that Modifies("iter3s1","count") pattern a1("paper",_"flag"_) pattern a2(_,_"packA*packA+packB*packB"_)]]></querystr>
+<stuans>  packApackA*packBpackB*+</stuans>
+<correct>5 35,7 35</correct>
+<time_taken>11.000000</time_taken>
+<failed>
+<missing>5 35,7 35</missing>
+<additional>  packApackA*packBpackB*+</additional>
+<summary>
+<expected>2</expected>
+<matched>0</matched>
+<missing>2</missing>
+<additional>1</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="1" UnnamedVar="1" Uses="2" SuchThat="3" CondNum="8" RelNum="3" comment="Query30">30</id><querystr><![CDATA[print p; variable var; procedure proc; Select proc such that Uses(13,"paper") such that Uses(9, var) such that Parent*(_,_)]]></querystr>
+<stuans></stuans>
+<correct>iter3s1,met1,met2,met3</correct>
+<time_taken>7.000000</time_taken>
+<failed>
+<missing>iter3s1,met1,met2,met3</missing>
+<additional></additional>
+<summary>
+<expected>4</expected>
+<matched>0</matched>
+<missing>4</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Parent="2" SuchThat="2" CondNum="5" RelNum="2" comment="Query31">31</id><querystr><![CDATA[while w1, w2, w3; Select <w1, w2, w3> such that Parent(w1,w2) such that Parent(w2,w3)]]></querystr>
+<stuans>4 9 11,9 11 13</stuans>
+<correct>4 9 11,9 11 13</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Parentstar="2" SuchThat="2" CondNum="5" RelNum="2" comment="Query31">31</id><querystr><![CDATA[while w1, w2, w3; Select <w1, w2, w3> such that Parent*(w1,w2) such that Parent*(w2,w3)]]></querystr>
+<stuans>4 11 13,4 9 11,4 9 13,9 11 13</stuans>
+<correct>4 9 11,4 9 13,4 11 13,9 11 13</correct>
+<time_taken>7.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query32">32</id><querystr><![CDATA[stmt s; Select s such that Next(s,3)]]></querystr>
+<stuans>2</stuans>
+<correct>2</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query33">33</id><querystr><![CDATA[stmt s; Select s such that Next*(s,3)]]></querystr>
+<stuans>1,2</stuans>
+<correct>1,2</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query34">34</id><querystr><![CDATA[stmt s; Select s such that Next(24,s)]]></querystr>
+<stuans>25,31</stuans>
+<correct>25,31</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="1" SuchThat="1" CondNum="3" RelNum="1" comment="Query35">35</id><querystr><![CDATA[stmt s; Select s such that Next(7,s)]]></querystr>
+<stuans>9</stuans>
+<correct>9</correct>
+<time_taken>5.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="2" SuchThat="2" CondNum="5" RelNum="2" comment="Query36">36</id><querystr><![CDATA[stmt s; Select s such that Next*(4,s) such that Next*(s,14)]]></querystr>
+<stuans>10,11,12,13,14,4,5,6,7,8,9</stuans>
+<correct>4,5,6,7,8,9,10,11,12,13,14</correct>
+<time_taken>10.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Nextstar="2" SuchThat="2" CondNum="5" RelNum="2" comment="Query37">37</id><querystr><![CDATA[stmt s; Select s such that Next*(24,s) such that Next*(s,35)]]></querystr>
+<stuans>24,25,26,27,28,29,30,31,32,33,34</stuans>
+<correct>24,25,26,27,28,29,30,31,32,33,34</correct>
+<time_taken>8.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" CondNum="1" RelNum="0" comment="Query38">38</id><querystr><![CDATA[call c; variable v; stmt s; Select c]]></querystr>
+<stuans>2,23,3</stuans>
+<correct>2,3,23</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Uses="1" SuchThat="2" CondNum="5" RelNum="2" comment="Query39">39</id><querystr><![CDATA[call c; variable v1, v2; Select c such that Uses(c, v1) such that Modifies(c, v2)]]></querystr>
+<stuans></stuans>
+<correct>3,23</correct>
+<time_taken>4.000000</time_taken>
+<failed>
+<missing>23,3</missing>
+<additional></additional>
+<summary>
+<expected>2</expected>
+<matched>0</matched>
+<missing>2</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Modifies="1" Uses="1" SuchThat="2" CondNum="5" RelNum="2" comment="Query40">40</id><querystr><![CDATA[call c; variable v; Select c such that Uses(c, v) such that Modifies(c, v)]]></querystr>
+<stuans></stuans>
+<correct>3</correct>
+<time_taken>4.000000</time_taken>
+<failed>
+<missing>3</missing>
+<additional></additional>
+<summary>
+<expected>1</expected>
+<matched>0</matched>
+<missing>1</missing>
+<additional>0</additional>
+</summary>
+</failed>
+</query>
+<query>
+<id ReturnTuple="1" Next="2" SuchThat="2" CondNum="5" RelNum="2" comment="Query41">41</id><querystr><![CDATA[call c1, c2; stmt s; Select c1 such that Next(c1, c2) such that Next(c1, s)]]></querystr>
+<stuans>2</stuans>
+<correct>2</correct>
+<time_taken>6.000000</time_taken>
+<passed/>
+</query>
+<query>
+<id ReturnTuple="1" Next="2" SuchThat="2" CondNum="5" RelNum="2" comment="Query42">42</id><querystr><![CDATA[stmt s; call c1, c2; Select <c1, c2> such that Next(c1, c2) such that Next(c2, s)]]></querystr>
+<stuans>2 3</stuans>
+<correct>2 3</correct>
+<time_taken>7.000000</time_taken>
+<passed/>
+</query>
+</queries>
+</test_results>

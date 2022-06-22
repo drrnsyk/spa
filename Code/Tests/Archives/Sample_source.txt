@@ -1,0 +1,15 @@
+procedure p {
+
+	if (x > 1) then {
+	    	read a; 
+	} else {
+		while (a > 0) {
+			read b;
+		}
+	}
+	
+	read d;
+	d = a + 1;
+	print d;
+
+}
